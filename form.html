@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-with, initial-scale=1.0">
+    <title>Corinne's Form</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet"
+  </head>
+  <body>
+    <div class="container">
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <h1>Corinne's Form</h1>
+      <form name="my-form" class="form">
+        <label>Enter the answer to the following problem: (5 * 6 + 5) / 7 </label>
+        <input type="text" name="math" />
+        <br />
+
+        <label>Which of the following pets has Corinne had? </label>
+        <select name="pet">
+          <option value="snakes">Snakes</option>
+          <option value="rats">Rats</option>
+          <option value="chinchillas">Chinchillas</option>
+          <option value="frogs">Frogs</option>
+          <option value="parakeets">Parakeets</option>
+        </select>
+        <br />
+
+        <label>On whose desk can you find a wedding cake figurine? </label>
+        <label><input type="radio" name="desk" value="mary" />Mary</label>
+        <input type="radio" name="desk" value="phil" />Phil
+        <input type="radio" name="desk" value="lori" /> Lori
+        <input type="radio" name="desk" value="mason" /> Mason
+        <input type="radio" name="desk" value="corey" /> Corey
+        <br />
+
+        <label>What time does Marc wake up? </label>
+        <input type="time" name="usr_time">
+        <br />
+
+        <button type="submit">Submit</button>
+
+      </form>
+    </div>
+
+  </body>
+</html>
