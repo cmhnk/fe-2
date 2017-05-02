@@ -4,14 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewpoint" content="width=device-with, initial-scale=1.0">
     <title>Corinne's Questionnaire</title>
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="custom.css" rel="stylesheet">
   </head>
 
   <body>
     <div class="container">
-      <script src="js/jquery-1.11.3.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
         <div class="text-center">
           <h1>Corinne's Date Screener</h1>
           <h4>Provide satisfactory answers and I'll buy you dinner!*</h4>
@@ -19,21 +20,21 @@
       <br />
       <br />
 
-      <form>
+      <form class="date-form">
         <div class="form-group">
           <div class="row">
-            <fieldset class="form-group">
-              <legend class="col-sm-6 text-right"> Have you ever been convicted of a felony? </legend>
+            <fieldset class="form-group" id="felony">
+              <legend for="felony" class="col-sm-6 text-right"> Have you ever been convicted of a felony? </legend>
               <div class="col-sm-3">
                 <div class="form-check">
                   <label class="felony-label">
-                    <input class="felony-input" type="radio" name="felonyRadios" value="yes">
+                    <input type="radio" name="felonyRadios" value="yes">
                       Yes
                   </label>
                 </div>
                 <div class="form-check">
                   <label class="felony-label">
-                    <input class="felony-input" type="radio" name="felonyRadios" value="no">
+                    <input type="radio" name="felonyRadios" value="no">
                       No
                   </label>
                 </div>
@@ -85,7 +86,7 @@
 
             <div class="row">
               <fieldset class="form-group">
-                <legend for="hear" class="col-sm-6 text-right"> What are your intentions? </legend>
+                <legend for="hear" class="col-sm-6 text-right"> Enter an original haiku: </legend>
                 <div class="col-sm-3">
                   <textarea class="form-control" id="hear" rows="3"></textarea>
                 </div>
@@ -98,7 +99,7 @@
           <div class=col-sm-2></div>
           <div class=col-sm-2></div>
           <div class=col-sm-2>
-            <button type="submit" class="btn btn-primary text-center">Submit</button>
+            <button type="submit" class="btn btn-primary text-center" name="submit">Submit</button>
           </div>
           <div class=col-sm-4></div>
         </div>
@@ -106,10 +107,10 @@
 
       <br />
       <div class="text-center">
-        <h5>*Just kidding</h5>
+        <h5>*Totally kidding</h5>
       </div>
     </div>
 
-
+    <script src="form.js"></script>
   </body>
 </html>
