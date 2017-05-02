@@ -1,26 +1,14 @@
-*/ cusom CSS file
+/* custom CSS file*/
 
-html {
-
-}
-body {
-
-}
 h1 {
   color: #03a9f4
 }
-p {
 
-}
-@media {
-
-}
-.form-group {
-
-}
-.form-control {
-
-}
-.form-check {
-
+@media (max-width: 600px){
+  body {
+    font-size: 20px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgba(158, 158, 158, 0.44);
+  }
 }
