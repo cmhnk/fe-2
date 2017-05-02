@@ -3,47 +3,104 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewpoint" content="width=device-with, initial-scale=1.0">
-    <title>Corinne's Form</title>
-
+    <title>Corinne's Questionnaire</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="custom.css" rel="stylesheet"
+    <link href="custom.css" rel="stylesheet">
   </head>
+
   <body>
     <div class="container">
       <script src="js/jquery-1.11.3.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      <h1>Corinne's Form</h1>
-      <form name="my-form" class="form">
-        <label>Enter the answer to the following problem: (5 * 6 + 5) / 7 </label>
-        <input type="text" name="math" />
-        <br />
+        <div class="text-center">
+          <h1>Corinne's Date Screener</h1>
+          <h4>Provide satisfactory answers and I'll buy you dinner!*</h4>
+        </div>
+      <br />
+      <br />
 
-        <label>Which of the following pets has Corinne had? </label>
-        <select name="pet">
-          <option value="snakes">Snakes</option>
-          <option value="rats">Rats</option>
-          <option value="chinchillas">Chinchillas</option>
-          <option value="frogs">Frogs</option>
-          <option value="parakeets">Parakeets</option>
-        </select>
-        <br />
+      <form>
+        <div class="form-group">
+          <div class="row">
+            <fieldset class="form-group">
+              <legend class="col-sm-6 text-right"> Have you ever been convicted of a felony? </legend>
+              <div class="col-sm-3">
+                <div class="form-check">
+                  <label class="felony-label">
+                    <input class="felony-input" type="radio" name="felonyRadios" value="yes">
+                      Yes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="felony-label">
+                    <input class="felony-input" type="radio" name="felonyRadios" value="no">
+                      No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <label>On whose desk can you find a wedding cake figurine? </label>
-        <label><input type="radio" name="desk" value="mary" />Mary</label>
-        <input type="radio" name="desk" value="phil" />Phil
-        <input type="radio" name="desk" value="lori" /> Lori
-        <input type="radio" name="desk" value="mason" /> Mason
-        <input type="radio" name="desk" value="corey" /> Corey
-        <br />
+          <div class="row">
+            <fieldset class="form-group">
+              <legend for="math" class="col-sm-6 text-right"> Solve the following: (5 x 6 + 5) / 7 =  </legend>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="math">
+              </div>
+            </div>
+          </div>
 
-        <label>What time does Marc wake up? </label>
-        <input type="time" name="usr_time">
-        <br />
+          <div class="form-group">
+            <div class="row">
+              <fieldset class="form-group">
+                <legend class="col-sm-6 text-right"> Of the pets listed below, which would you be most excited to own? </legend>
+                <div class="col-sm-3">
+                  <div class="form-check">
+                    <label class="pets-label">
+                      <input class="pets-input" type="radio" name="petsRadios" value="snakes">
+                        Snakes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="pets-label">
+                      <input class="pets-input" type="radio" name="petsRadios" value="gerbils">
+                        Gerbils
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="pets-label">
+                      <input class="pets-input" type="radio" name="petsRadios" value="frogs">
+                        Frogs
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="pets-label">
+                      <input class="pets-input" type="radio" name="petsRadios" value="parakeets">
+                        Parakeets
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <button type="submit">Submit</button>
-
+            <div class="row">
+              <fieldset class="form-group">
+                <legend for="hear" class="col-sm-6 text-right"> What are your intentions? </legend>
+                <div class="col-sm-3">
+                  <textarea class="form-control" id="hear" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
+
+      <br />
+      <div class="text-center">
+        <h5>*Just kidding</h5>
+      </div>
     </div>
+
 
   </body>
 </html>
