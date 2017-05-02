@@ -1,24 +1,34 @@
 $(document).ready(function() {
   var $form = $('.date-form');
 
-    $('button[name="submit"]').click(function(){
-      var mathResponse = $('input[id="math"]').val()
+  $form.on('submit', function(event){
+    event.preventDefault();
 
-      var felonyNotBlank = $('input[name="felonyRadios"]').is(':checked')
+    // Handling blanks:
+    var mathBlank = $('input[id="math"]').val().length == 0
+    var petBlank = $('input[name="petsRadios"]:checked').length == 0
+    var haikuBlank = $('textarea[name="haiku"]').val().length == 0
+    var felonyBlank = $('input[name="felonyRadios"]:checked').length == 0
 
-      console.log(felonyNotBlank)
-    });
+    if (felonyBlank || mathBlank || petBlank || haikuBlank){
+      console.log("ERROR! Please answer all questions.")
+    }
 
+    var mathResponse = $('input[id="math"]').val()
 
-  //   var validateForm = function() {
-  //   var actualValue = $('input[name="felonyRadios"]').val();
-  //
-  //   if (actualValue === 'yes') {
-  //     console.log('IS VALID');
-  //   } else {
-  //     console.log("BOOOOOOOOOOOOOOO");
-  //   }
-  // };
+    if (!mathBlank && mathResponse != 5){
+      console.log("ERROR! Answer is 5.");
+    }
 
+    var petSelected = $('input[name="petsRadios"]:checked').val()
 
+    if (!petBlank && petSelected != "frogs") {
+      console.log("ERROR! You must select Frogs to be considered further.")
+    }
+
+    if (!mathBlank && !petBlank && !haikuBlank && !felonyBlank && petSelected == "frogs" && mathResponse == 5){
+      console.log("Thank you for your response. I will get back to you in 5-7 business days.")
+    }
+
+  });
 });
